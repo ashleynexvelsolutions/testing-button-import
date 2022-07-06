@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button } from '@ashleynexvelsolutions/button'
 
+function buttonFunction(){
+	const data =  //In the real world, this will be the result of a graphql query.
+	{
+		"text": "Hey this is some test button text. The following text is part of the component: "
+	}
+	return(
+	  {
+		text: data.text,
+	  backgroundColor: 'bg-test-two',
+	  textColor: 'text-test-one'
+	  }
+	  
+	)
+  }
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="text-3xl font-bold text-test-two">
+      Hello world!
+    </h1>
+<Button changeable={buttonFunction()} />
     </div>
   );
 }
